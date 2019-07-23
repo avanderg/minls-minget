@@ -1,11 +1,10 @@
 /* Name: Denis Pyryev (dpyryev)
+ *       Aaron VanderGraaff (avanderg)
  *
- * Date: May 3, 2019
- * Assignment: Program 3
+ * Date: June 5, 2019
+ * Assignment: Program 5
  * Instructor: Professor Phillip Nico
  * Course: CPE 453-03
- *
- * Description:
  */
 
 #include "utilities.h"

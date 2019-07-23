@@ -1,0 +1,75 @@
+Name: Denis Pyryev (dpyryev)
+      Aaron VanderGraaff (avanderg)
+ 
+Date: June 5, 2019
+Assignment: Program 5
+Instructor: Professor Phillip Nico
+Course: CPE 453-03
+
+minls and minget are Minix filesystem readers. minls lists a file or directory
+on a filesystem image and minget copies a regular file from a path in an image
+to a given path, if the path is omitted it copies to stdout. 
+
+Program Instructions:
+
+    1. You can build the program by running:
+
+        $ make
+
+          OR
+
+        $ make all
+
+    2. If you want to build the minget and minls programs separately, you 
+       can run either of the two commands:
+            
+        $ make minls        
+            
+          OR
+
+        $ make minget
+
+    3. You can run the minls executable in the following way:
+
+        minls [ -v ] [ -p part [ -s subpart ] ] imagefile [ path ] 
+
+        > -v flag = putting the program in verbose mode and prints superblock
+                    info and inode of source file or directory.
+
+        > -p part = allows the program to choose a primary partition on the
+                    image with 'part' being the partition value.
+
+        > -s subpart = allows the program to choose a subpartition in addition
+                       to the primary with 'subpart' being the subpart value.
+
+        > imagefile = the given filesystem image that the program with process.
+
+        > path = an optional path argument for the user to traverse the
+                 filesystem. Set to root ('/') if ommitted.
+
+    3. You can run the minget executable in the following way:
+
+        minget [ -v ] [ -p part [ -s subpart ] ] imagefile srcpath [ dstpath ]
+        
+        > -v flag = putting the program in verbose mode and prints superblock
+                    info and inode of source file or directory.
+
+        > -p part = allows the program to choose a primary partition on the
+                    image with 'part' being the partition value.
+
+        > -s subpart = allows the program to choose a subpartition in addition
+                       to the primary with 'subpart' being the subpart value.
+
+        > imagefile = the given filesystem image that the program with process.
+
+        > srcpath = the path argument for the user to traverse the filesystem
+                    and find the proper file to read and outputi its data.
+
+        > dstpath = an optional path to copy the srcpath data to. If omitted,
+                    it defaults to STDOUT.
+
+    4. In order to clean up and remove all extraneous object files (.o) and
+       executables, run the following command:
+
+        $ make clean
+
